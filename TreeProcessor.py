@@ -54,3 +54,6 @@ class Calculator(Transformer):
 
     def pow(self, args):
         return args[0] ** args[1]
+
+    def neg_exp(self, args):
+        return -args[0]

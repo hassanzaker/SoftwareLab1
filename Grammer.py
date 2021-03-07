@@ -7,11 +7,12 @@ grammer = """
         | aexp "-" bexp -> sub
         | bexp -> bexp
     bexp: bexp "*" cexp -> mul
-        | bexp "/" cexp -> mul
+        | bexp "/" cexp -> div
         | bexp "**" cexp -> pow
         | cexp -> cexp
     cexp: "(" exp ")" -> par_exp_par
         | "|" exp "|" -> abs_exp
+        | "-" exp -> neg_exp
         | "sqrt(" exp ")" -> sqrt_exp
         | constant -> constant
     
