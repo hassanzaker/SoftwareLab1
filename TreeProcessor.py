@@ -1,5 +1,6 @@
 from lark import Transformer
 import math
+import random
 class Calculator(Transformer):
 
     def constant_int(self, args):
@@ -76,3 +77,6 @@ class Calculator(Transformer):
         if args[1] <= 0 or args[1] == 1:
             raise Exception('unexpected value for log')
         return math.log(args[0], args[1])
+
+    def rand(self, args):
+        return random.random()
