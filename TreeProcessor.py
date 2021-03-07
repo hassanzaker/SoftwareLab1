@@ -69,3 +69,10 @@ class Calculator(Transformer):
 
     def cot(self, args):
         return 1 / math.tan(args[0] / 180 * math.pi)
+
+    def log(self, args):
+        if args[0] <= 0:
+            raise Exception('unexpected value for log')
+        if args[1] <= 0 or args[1] == 1:
+            raise Exception('unexpected value for log')
+        return math.log(args[0], args[1])

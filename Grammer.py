@@ -18,6 +18,7 @@ grammer = """
         | "cos(" exp ")" -> cos
         | "tan(" exp ")" -> tan
         | "cot(" exp ")" -> cot
+        | "log(" exp "," exp ")" -> log
         | constant -> constant
     
     constant : INT -> constant_int
