@@ -63,3 +63,9 @@ class Calculator(Transformer):
 
     def cos(self, args):
         return math.cos(args[0] / 180 * math.pi)
+
+    def tan(self, args):
+        return math.tan(args[0] / 180 * math.pi)
+
+    def cot(self, args):
+        return 1 / math.tan(args[0] / 180 * math.pi)
