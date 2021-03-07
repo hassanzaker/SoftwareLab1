@@ -4,5 +4,5 @@ from TreeProcessor import Calculator
 
 parser = Lark(grammer, start="exp", parser="earley", lexer="standard")
 calculator = Calculator()
-answer = calculator.transform(parser.parse('(4 + 5) * 6'))
+answer = calculator.transform(parser.parse('|5.5 - 6|'))
 print(answer)
