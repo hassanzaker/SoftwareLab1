@@ -80,3 +80,17 @@ class Calculator(Transformer):
 
     def rand(self, args):
         return random.random()
+
+    def max(self, args):
+        temp = -math.inf
+        for arg in args:
+            if arg > temp:
+                temp = arg
+        return temp
+
+    def min(self, args):
+        temp = math.inf
+        for arg in args:
+            if arg < temp:
+                temp = arg
+        return temp
