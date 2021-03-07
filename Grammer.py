@@ -11,6 +11,7 @@ grammer = """
         | bexp "**" cexp -> pow
         | cexp -> cexp
     cexp: "(" exp ")" -> par_exp_par
+        | "|" exp "|" -> abs_exp
         | constant -> constant
     
     constant : INT -> constant_int
