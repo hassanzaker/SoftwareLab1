@@ -8,6 +8,7 @@ grammer = """
         | bexp -> bexp
     bexp: bexp "*" cexp -> mul
         | bexp "/" cexp -> mul
+        | bexp "**" cexp -> pow
         | cexp -> cexp
     cexp: "(" exp ")" -> par_exp_par
         | constant -> constant

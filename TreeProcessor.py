@@ -39,3 +39,6 @@ class Calculator(Transformer):
 
     def par_exp_par(self, args):
         return args[0]
+
+    def pow(self, args):
+        return args[0] ** args[1]
