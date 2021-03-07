@@ -45,3 +45,9 @@ class Calculator(Transformer):
             return args[0]
         else:
             return -1 * args[0]
+
+    def sqrt_exp(self, args):
+        if args[0] >= 0:
+            return math.sqrt(args[0])
+        else:
+            raise Exception("negative value for sqrt")
