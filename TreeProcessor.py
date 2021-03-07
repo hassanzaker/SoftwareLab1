@@ -24,3 +24,18 @@ class Calculator(Transformer):
 
     def add(self, args):
         return args[0] + args[1]
+
+    def sub(self, args):
+        return args[0] - args[1]
+
+    def mul(self, args):
+        return args[0] * args[1]
+
+    def div(self, args):
+        return args[0] / args[1]
+
+    def mod(self, args):
+        return args[0] % args[1]
+
+    def par_exp_par(self, args):
+        return args[0]
