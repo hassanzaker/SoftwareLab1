@@ -28,7 +28,8 @@ grammer = """
     
     constant : INT -> constant_int
             | DOUBLE -> constant_double
-    
+            | "pi" -> pi_constant
+            | "e" -> e_constant
     DOUBLE.2 : /(\\d)+\\.(\\d)*/
     INT: /[0-9]+/   
     

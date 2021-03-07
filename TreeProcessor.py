@@ -105,3 +105,9 @@ class Calculator(Transformer):
 
     def floor_exp(self, args):
         return math.floor(args[0])
+
+    def pi_constant(self, args):
+        return math.pi
+
+    def e_constant(self, args):
+        return math.e
