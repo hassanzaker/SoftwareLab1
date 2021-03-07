@@ -1,5 +1,5 @@
 from lark import Transformer
-
+import math
 class Calculator(Transformer):
 
     def constant_int(self, args):
@@ -39,6 +39,18 @@ class Calculator(Transformer):
 
     def par_exp_par(self, args):
         return args[0]
+
+    def abs_exp(self, args):
+        if args[0] >= 0:
+            return args[0]
+        else:
+            return -1 * args[0]
+
+    def sqrt_exp(self, args):
+        if args[0] >= 0:
+            return math.sqrt(args[0])
+        else:
+            raise Exception("negative value for sqrt")
 
     def pow(self, args):
         return args[0] ** args[1]
