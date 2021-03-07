@@ -102,3 +102,6 @@ class Calculator(Transformer):
             return 0
         else:
             return -1
+
+    def floor_exp(self, args):
+        return math.floor(args[0])
