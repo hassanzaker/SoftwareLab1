@@ -57,3 +57,9 @@ class Calculator(Transformer):
 
     def neg_exp(self, args):
         return -args[0]
+
+    def sin(self, args):
+        return math.sin(args[0] / 180 * math.pi)
+
+    def cos(self, args):
+        return math.cos(args[0] / 180 * math.pi)
