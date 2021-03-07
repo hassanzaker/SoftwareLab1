@@ -94,3 +94,11 @@ class Calculator(Transformer):
             if arg < temp:
                 temp = arg
         return temp
+
+    def sign(self, args):
+        if args[0] > 0:
+            return 1
+        elif args[0] == 0:
+            return 0
+        else:
+            return -1

@@ -19,6 +19,7 @@ grammer = """
         | "tan(" exp ")" -> tan
         | "cot(" exp ")" -> cot
         | "rand" -> rand
+        | "sign" exp -> sign
         | "max(" (exp ",")+ exp ")" -> max
         | "min(" (exp ",")+ exp ")" -> min
         | "log(" exp "," exp ")" -> log
