@@ -12,6 +12,7 @@ grammer = """
         | cexp -> cexp
     cexp: "(" exp ")" -> par_exp_par
         | "|" exp "|" -> abs_exp
+        | "sqrt(" exp ")" -> sqrt_exp
         | constant -> constant
     
     constant : INT -> constant_int
