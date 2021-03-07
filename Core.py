@@ -4,5 +4,6 @@ from TreeProcessor import Calculator
 
 parser = Lark(grammer, start="exp", parser="earley", lexer="standard")
 calculator = Calculator()
+answer = calculator.transform(parser.parse('sqrt(1-2)'))
 answer = calculator.transform(parser.parse('(4 ** 2) * 6'))
 print(answer)
